@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  demos:
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./examples:/workspace/notebooks
+      - ./tests:/workspace/tests
+      - ./imantics:/workspace/libs/imantics
+    build: .
