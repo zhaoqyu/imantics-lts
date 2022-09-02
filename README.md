@@ -55,5 +55,5 @@ Currently Support Formats:
 ## Installing
 
 ```
-pip install imantics
+pip install imantics_lts
 ```
