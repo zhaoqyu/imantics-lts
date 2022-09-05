@@ -36,7 +36,6 @@ Currently Support Formats:
 - VOC
 
 
-<p align="center">Join our growing <a href="https://discord.gg/4zP5Qkj">discord community</a> of ML practitioner</p>
 <p align="center">
   <a href="https://discord.gg/4zP5Qkj">
     <img src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" width="120">

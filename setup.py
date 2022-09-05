@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='imantics_lts',
-    version='0.1.14',
+    version='0.1.15',
     description='Python package for managing image annotations',
     url='https://github.com/zhaoqyu/Image-Semantics-Tools',
     author='zhaoqyu',
