@@ -84,7 +84,7 @@ class Annotation(Semantic):
         """
         return cls(image=image, category=category, polygons=polygons)
 
-    def __init__(self, image=None, category=None, bbox=None, mask=None, polygons=None, id=0,\
+    def __init__(self, image=None, category=None, bbox=None, mask=None, polygons=None, id=0, \
                  color=None, metadata={}, width=0, height=0):
 
         assert isinstance(id, int), "id must be an integer"
@@ -93,7 +93,6 @@ class Annotation(Semantic):
         self.image = image
         self.width = width
         self.height = height
-
 
         if image is not None:
             self.width = image.width
@@ -254,7 +253,7 @@ class Annotation(Semantic):
         """
         Generates COCO format of annotation
 
-        :param include: True to include all COCO formats, Fale to generate just
+        :param include: True to include all COCO formats, False to generate just
                         annotation format
         :type include: bool
         :returns: COCO format of annotation
@@ -298,13 +297,13 @@ class Annotation(Semantic):
                     y = y1
                 else:
                     a = (y2 - y1) / (x2 - x1)
-                    b = y1 - a*x1
+                    b = y1 - a * x1
                     x = (x2 + x1) // 2
-                    y = int(round(a*x + b))
+                    y = int(round(a * x + b))
 
                 new_segmentation = polygon[:2] + [x, y] + polygon[2:]
                 annotation['segmentation'][i] = new_segmentation
-                i += 1
+            i += 1
 
         if include:
             image = category = {}
@@ -345,17 +344,17 @@ class Annotation(Semantic):
     def voc(self):
 
         element = E('object',
-            E('name', self.category.name),
-            E('pose', self.metadata.get('pose', 'Unspecified')),
-            E('truncated', str(1 if self.truncated() else 0)),
-            E('difficult', str(self.metadata.get('difficult', 0))),
-            E('bndbox',
-                E('xmin', str(self.bbox._xmin)),
-                E('ymin', str(self.bbox._ymin)),
-                E('xmax', str(self.bbox._xmax)),
-                E('ymax', str(self.bbox._ymax)),
-            )
-        )
+                    E('name', self.category.name),
+                    E('pose', self.metadata.get('pose', 'Unspecified')),
+                    E('truncated', str(1 if self.truncated() else 0)),
+                    E('difficult', str(self.metadata.get('difficult', 0))),
+                    E('bndbox',
+                      E('xmin', str(self.bbox._xmin)),
+                      E('ymin', str(self.bbox._ymin)),
+                      E('xmax', str(self.bbox._xmax)),
+                      E('ymax', str(self.bbox._ymax)),
+                      )
+                    )
 
         return element
 
@@ -470,7 +469,7 @@ class BBox:
         """
         if not self._c_polygons:
             polygon = self.top_left + self.top_right \
-                    + self.bottom_right + self.bottom_left
+                      + self.bottom_right + self.bottom_left
             return Polygons([polygon])
         return self._c_polygons
 
@@ -482,7 +481,6 @@ class BBox:
         :rtype: :class:`Mask`
         """
         if not self._c_mask:
-
             mask = np.zeros((height, width))
             mask[self.min_point[1]:self.max_point[1], self.min_point[0]:self.max_point[0]] = 1
 
@@ -603,7 +601,6 @@ class BBox:
 
 
 class Polygons:
-
     #: Polygon instance types
     INSTANCE_TYPES = (list, tuple)
 
@@ -833,7 +830,6 @@ class Mask:
         :rtype: :class:`Polygons`
         """
         if not self._c_polygons:
-
             # Generate polygons from mask
             mask = self.array.astype(np.uint8)
             mask = cv2.copyMakeBorder(mask, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=0)
