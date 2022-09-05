@@ -109,3 +109,4 @@ venv.bak/
 convert_lepu2coco.py
 convert_lepu2coco_bk.py
 get_subset.py
+.pypirc
