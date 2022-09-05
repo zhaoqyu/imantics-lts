@@ -1,6 +1,6 @@
 
 import pytest
-from imantics import BBox
+from imantics_lts import BBox
 
 
 test_shape = [

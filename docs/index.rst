@@ -18,9 +18,9 @@ or use the latest build with
 
 .. code-block:: console
 
-    $ git clone https://github.com/jsbroks/imantics/
+    $ git clone https://github.com/zhaoqyu/imantics-lts/
     $ cd /imantics
-    $ pip install imantics
+    $ pip install imantics-lts
 
 
 :doc:`tutorial`
@@ -38,12 +38,12 @@ Contributing
 **Yes please!**  We are always looking for contributions, additions and
 improvements.
 
-The source is available on `GitHub <https://github.com/jsbroks/imantics/>`_
+The source is available on `GitHub <https://github.com/zhaoqyu/imantics-lts/>`_
 and contributions are always encouraged. Contributions can be as simple as
 minor tweaks to this documentation, the website or the core.
 
 To contribute, fork the project on
-`GitHub <https://github.com/jsbroks/imantics/>`_ and send a pull request.
+`GitHub <https://github.com/zhaoqyu/imantics-lts/>`_ and send a pull request.
 
 
 Table of Content

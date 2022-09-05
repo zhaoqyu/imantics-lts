@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from imantics import Mask
+from imantics_lts import Mask
 
 test_intersect = [
     # array a, array b, expect intersected array

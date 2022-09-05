@@ -104,3 +104,8 @@ venv.bak/
 .mypy_cache/
 
 \.vscode/
+
+# private code
+convert_lepu2coco.py
+convert_lepu2coco_bk.py
+get_subset.py

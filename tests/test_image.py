@@ -1,4 +1,4 @@
-from imantics import Image
+from imantics_lts import Image
 
 class TestImageCreate:
 

@@ -1,4 +1,4 @@
-from imantics import Annotation, Mask, BBox, Polygons
+from imantics_lts import Annotation, Mask, BBox, Polygons
 
 
 # class TestAnnotationConversion:

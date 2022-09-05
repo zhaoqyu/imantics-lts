@@ -1,6 +1,6 @@
 import os, json, numpy as np
 from tqdm import tqdm
-from imantics import Mask, Image, Category, Dataset
+from imantics_lts import Mask, Image, Category, Dataset
 import cv2
 
 dataset = Dataset('forgery') # 先定义一个数据库对象，后续需要往里面添加具体的image和annotation

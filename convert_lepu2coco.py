@@ -1,7 +1,7 @@
 import argparse
 import os
 from tqdm import tqdm
-from imantics import Mask, Image, Category, Dataset
+from imantics_lts import Mask, Image, Category, Dataset
 import pandas as pd
 import pydicom
 from pydicom.pixel_data_handlers.util import convert_color_space

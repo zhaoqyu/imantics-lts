@@ -21,7 +21,7 @@ sys.path.insert(0, os.path.abspath('../'))
 
 project = u'Image Semantics'
 copyright = u'2019, Justin Brooks'
-author = u'Justin Brooks'
+author = u'Zhaoqyu'
 
 # The short X.Y version
 version = u''
